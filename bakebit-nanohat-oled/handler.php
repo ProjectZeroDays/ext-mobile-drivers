@@ -4,25 +4,21 @@
 $clear = "/opt/drivebadger/external/ext-mobile-drivers/bakebit-nanohat-oled/driver/clear.py";
 $print = "/opt/drivebadger/external/ext-mobile-drivers/bakebit-nanohat-oled/driver/line.py";
 
+//  -1  - clear all display
+//  -2  - dynamic line, use one from command line
+// 0-7  - static line, use one from the table
 $events = array (
+	"shutdown"                                 => array(-1, ""),
+
 	"ready"                                    => array(0, "ready"),
-	"progress"                                 => array(0, "..."),
-	"shutdown"                                 => array(-1, false),
+	"target_ready"                             => array(0, "target ready"),
+	"target_disconnected"                      => array(0, "ready"),
 
-	"target_drive_ready"                       => array(1, "target ready"),
-	"target_drive_disconnected"                => array(1, false),
+	"media_device_detected"                    => array(7, "syncing media"),
+	"media_device_processed"                   => array(7, "done"),
 
-	"user_drive_mounted"                       => array(4, "user drive mnt"),
-	"user_drive_disconnected"                  => array(4, false),
-
-	"ptp_device_detected"                      => array(5, "ptp detected"),
-	"ptp_device_processed"                     => array(5, false),
-
-	"mtp_device_detected"                      => array(5, "mtp detected"),
-	"mtp_device_processed"                     => array(5, false),
-
-	"operation_started"                        => array(7, "rsyncing data"),
-	"operation_finished"                       => array(7, false),
+	"operation_started"                        => array(-2, "syncing data"),
+	"operation_finished"                       => array(-2, "done"),
 );
 
 
@@ -33,8 +29,8 @@ function execute($exec) {
 }
 
 
-if ($argc < 2)
-	die("usage: $argv[0] <event>\n");
+if ($argc < 3)
+	die("usage: $argv[0] <event> <line>\n");
 
 $event = $argv[1];
 
@@ -42,13 +38,13 @@ if (!isset($events[$event]))
 	die("error: unknown event \"$event\"\n");
 
 $details = $events[$event];
-$line = $details[0]+1;
+$line = $details[0];
 $text = $details[1];
 
-if ($line == 0)
+if ($line == -1)
 	execute("$clear");
 else {
-	if ($text === false)
-		$text = "";
+	if ($line == -2)
+		$line = intval($argv[2]);
 	execute("$print $line \"$text\"");
 }

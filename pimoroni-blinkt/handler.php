@@ -20,25 +20,21 @@ $colors = array (
 	"white"  => array(255, 255, 255),
 );
 
+//  -1  - clear all display
+//  -2  - dynamic line, use one from command line
+// 0-7  - static line, use one from the table
 $events = array (
-	"ready"                                    => array(0, "yellow"),
-	"progress"                                 => array(0, "off"),
 	"shutdown"                                 => array(-1, "off"),
 
-	"target_drive_ready"                       => array(1, "green"),
-	"target_drive_disconnected"                => array(1, "off"),
+	"ready"                                    => array(0, "yellow"),
+	"target_ready"                             => array(0, "green"),
+	"target_disconnected"                      => array(0, "yellow"),
 
-	"user_drive_mounted"                       => array(4, "green"),
-	"user_drive_disconnected"                  => array(4, "off"),
+	"media_device_detected"                    => array(7, "green"),
+	"media_device_processed"                   => array(7, "off"),
 
-	"ptp_device_detected"                      => array(5, "yellow"),
-	"ptp_device_processed"                     => array(5, "off"),
-
-	"mtp_device_detected"                      => array(5, "green"),
-	"mtp_device_processed"                     => array(5, "off"),
-
-	"operation_started"                        => array(7, "orange"),
-	"operation_finished"                       => array(7, "off"),
+	"operation_started"                        => array(-2, "green"),
+	"operation_finished"                       => array(-2, "off"),
 );
 
 
@@ -49,8 +45,8 @@ function execute($exec) {
 }
 
 
-if ($argc < 2)
-	die("usage: $argv[0] <event>\n");
+if ($argc < 3)
+	die("usage: $argv[0] <event> <line>\n");
 
 $event = $argv[1];
 
@@ -61,8 +57,11 @@ $details = $events[$event];
 $pixel = $details[0];
 list($r, $g, $b) = $colors[$details[1]];
 
-if ($pixel != -1)
-	execute("$cmd $cache $pixel $brightness $r $g $b");
-else
+if ($pixel == -1) {
 	for ($pixel = 0; $pixel <= 7; $pixel++)
 		execute("$cmd $cache $pixel $brightness $r $g $b");
+} else {
+	if ($pixel == -2)
+		$pixel = intval($argv[2]);
+	execute("$cmd $cache $pixel $brightness $r $g $b");
+}

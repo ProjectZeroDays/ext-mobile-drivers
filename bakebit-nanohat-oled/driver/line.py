@@ -32,6 +32,6 @@ import sys
 import bakebit_128_64_oled as oled
 
 oled.init()
-oled.setTextXY(0, int(sys.argv[1])-1)
+oled.setTextXY(0, int(sys.argv[1]))
 oled.putString("                ")
 oled.putString(sys.argv[2])
