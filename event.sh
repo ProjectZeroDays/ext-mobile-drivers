@@ -28,7 +28,7 @@ if ! flock -w 3 9; then exit 1; fi
 
 # At this point, $slot should always mean:
 #   0 - global events (ready, shutdown etc.)
-#     - events regarding target drive (UUID registered in /etc/drivebadger/drives/target.list file)
+#     - events regarding target drive (UUID registered in target.uuid files)
 #     - events regarding MTP/PTP devices, which will be remapped to slot 7 in handlers
 #     - (for future) all other events, that have assigned static lines in handlers
 # 1-7 - events linked to partition numbers (see above)
