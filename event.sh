@@ -23,7 +23,7 @@ if [ "$slot" = "" ]; then exit 0; fi
 
 # Make sure that only one instance is running - this is purposely done AFTER scanning partition number.
 exec 9>/run/badger-event.lock
-if ! flock -w 3 9; then exit 1; fi
+if ! flock -w 10 9; then exit 1; fi
 
 
 # At this point, $slot should always mean:
