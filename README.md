@@ -4,10 +4,13 @@ All of these drivers are also available in separate repositories, for any other 
 
 - [`bakebit-nanohat-oled`](https://github.com/pisecurity/bakebit-nanohat-driver)
 - [`pimoroni-blinkt`](https://github.com/pisecurity/blinkt-persistence)
+- `waveshare-rgb-led-hat`
 
 ### Installing
 
-Clone this repository as `/opt/drivebadger/external/ext-mobile-drivers` directory on your Mobile Badger device.
+1. Clone this repository as `/opt/drivebadger/external/ext-mobile-drivers` directory on your Mobile Badger device.
+2. Inside this directory, create a symlink to subdirectory for your display device, eg. `ln -s pimoroni-blinkt installed`
+3. If required, install external drivers for your device.
 
 ### More information
 

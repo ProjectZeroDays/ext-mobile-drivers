@@ -21,11 +21,6 @@ fi
 if [ "$slot" = "" ]; then exit 0; fi
 
 
-# Make sure that only one instance is running - this is purposely done AFTER scanning partition number.
-exec 9>/run/badger-event.lock
-if ! flock -w 10 9; then exit 1; fi
-
-
 # At this point, $slot should always mean:
 #   0 - global events (ready, shutdown etc.)
 #     - events regarding target drive (UUID registered in target.uuid files)
@@ -33,12 +28,14 @@ if ! flock -w 10 9; then exit 1; fi
 #     - (for future) all other events, that have assigned static lines in handlers
 # 1-7 - events linked to partition numbers (see above)
 #
-if [ -f /usr/lib/python3/dist-packages/blinkt.py ]; then
-	/opt/drivebadger/external/ext-mobile-drivers/pimoroni-blinkt/handler.php "$1" $slot
+if [ -x /opt/drivebadger/external/ext-mobile-drivers/installed/handler.php ]; then
 
-elif [ -f /etc/friendlyelec-release ]; then
-	/opt/drivebadger/external/ext-mobile-drivers/bakebit-nanohat-oled/handler.php "$1" $slot
+	# Make sure that only one instance is running - this is purposely done AFTER
+	# scanning partition number and making sure, that this is really required.
+	exec 9>/run/badger-event.lock
+	if ! flock -w 10 9; then exit 1; fi
 
+	/opt/drivebadger/external/ext-mobile-drivers/installed/handler.php "$1" $slot
 else
 	logger -p user.info -t "badger-event[$$]" -- "$1 [$2]"
 fi
