@@ -4,7 +4,7 @@ All of these drivers are also available in separate repositories, for any other 
 
 - [`bakebit-nanohat-oled`](https://github.com/pisecurity/bakebit-nanohat-driver)
 - [`pimoroni-blinkt`](https://github.com/pisecurity/blinkt-persistence)
-- `│/pimoroni-scroll-hat-mini`
+- `pimoroni-scroll-hat-mini`
 - `waveshare-rgb-led-hat`
 
 ### Installing
