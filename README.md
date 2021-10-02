@@ -5,6 +5,7 @@ All of these drivers are also available in separate repositories, for any other 
 - [`bakebit-nanohat-oled`](https://github.com/pisecurity/bakebit-nanohat-driver)
 - [`pimoroni-blinkt`](https://github.com/pisecurity/blinkt-persistence)
 - `pimoroni-scroll-hat-mini`
+- `waveshare-144inch-lcd-hat`
 - `waveshare-rgb-led-hat`
 
 ### Installing
@@ -17,3 +18,5 @@ All of these drivers are also available in separate repositories, for any other 
 
 - [Drive Badger main repository](https://github.com/drivebadger/drivebadger)
 - [Drive Badger wiki](https://github.com/drivebadger/drivebadger/wiki)
+- [Mobile Badger wiki](https://github.com/drivebadger/mobilebadger/wiki)
+- [Events display page](https://github.com/drivebadger/mobilebadger/wiki/Events-display)
