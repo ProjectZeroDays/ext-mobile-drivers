@@ -1,9 +1,10 @@
 #!/usr/bin/php
 <?php
 
-$cache = "/run/144inch-lcd-hat.json";
-$clear = "/opt/drivebadger/external/ext-mobile-drivers/waveshare-144inch-lcd-hat/driver/clear.py";
-$print = "/opt/drivebadger/external/ext-mobile-drivers/waveshare-144inch-lcd-hat/driver/line.py";
+$output = "/run/framebuffer-driver.png";
+$cache = "/run/framebuffer-driver.json";
+$print = "/opt/drivebadger/external/ext-mobile-drivers/framebuffer/driver/line.py";
+$fbcopy = "/opt/drivebadger/external/ext-mobile-drivers/framebuffer/driver/fb.sh";
 
 //  -1  - clear all display
 //  -2  - dynamic line, use one from command line
@@ -42,10 +43,12 @@ $details = $events[$event];
 $line = $details[0];
 $text = $details[1];
 
-if ($line == -1)
-	execute("$clear");
-else {
-	if ($line == -2)
-		$line = intval($argv[2]);
-	execute("$print $cache $line \"$text\"");
-}
+if ($line == -1) {
+	unlink($cache);
+	$line = 0;
+	$text = "";
+} else if ($line == -2)
+	$line = intval($argv[2]);
+
+execute("$print $cache $output $line \"$text\"");
+execute("$fbcopy $output");

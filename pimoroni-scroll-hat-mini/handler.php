@@ -13,7 +13,7 @@ $levels = array (
 
 //  -1  - clear all display
 //  -2  - dynamic line, use one from command line
-// 0-7  - static line, use one from the table
+// 0-16 - static line, use one from the table
 $events = array (
 	"shutdown"                                 => array(-1, 0, "off"),
 

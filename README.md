@@ -1,12 +1,11 @@
 This repository contains hardware drivers for various LED/LCD displays, used with Raspberry Pi or similar platforms, to signal Mobile Badger functional states.
 
-All of these drivers are also available in separate repositories, for any other use:
-
-- [`bakebit-nanohat-oled`](https://github.com/pisecurity/bakebit-nanohat-driver)
-- [`pimoroni-blinkt`](https://github.com/pisecurity/blinkt-persistence)
-- `pimoroni-scroll-hat-mini`
-- `waveshare-144inch-lcd-hat`
-- `waveshare-rgb-led-hat`
+- [`bakebit-nanohat-oled`](bakebit-nanohat-oled) - [BakeBit NanoHat OLED](http://wiki.friendlyarm.com/wiki/index.php/NanoHat_OLED)
+- [`pimoroni-blinkt`](pimoroni-blinkt) - [Pimoroni Blinkt!](https://learn.pimoroni.com/tutorial/sandyj/getting-started-with-blinkt)
+- [`pimoroni-scroll-hat-mini`](pimoroni-scroll-hat-mini) - []()
+- [`waveshare-144inch-lcd-hat`](waveshare-144inch-lcd-hat) - []()
+- [`waveshare-rgb-led-hat`](waveshare-rgb-led-hat) - []()
+- [`framebuffer`](framebuffer) - generic driver for all HDMI-only displays, tested with [Adafruit PiTFT](https://learn.adafruit.com/adafruit-2-2-pitft-hat-320-240-primary-display-for-raspberry-pi), tuned for generic 320x240 screens
 
 ### Installing
 
