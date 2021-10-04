@@ -1,10 +1,13 @@
 #!/usr/bin/php
 <?php
 
-$output = "/run/framebuffer-driver.png";
-$cache = "/run/framebuffer-driver.json";
-$print = "/opt/drivebadger/external/ext-mobile-drivers/framebuffer/driver/line.py";
-$fbcopy = "/opt/drivebadger/external/ext-mobile-drivers/framebuffer/driver/fb.sh";
+$display_width  = 480;
+$display_height = 320;
+
+$output = "/run/uctronics-35inch-lcd.png";
+$cache = "/run/uctronics-35inch-lcd.json";
+$print = "/opt/drivebadger/external/ext-mobile-drivers/utils/framebuffer/line.py";
+$fbcopy = "/opt/drivebadger/external/ext-mobile-drivers/utils/framebuffer/copy.sh";
 
 //  -1  - clear all display
 //  -2  - dynamic line, use one from command line
@@ -50,5 +53,5 @@ if ($line == -1) {
 } else if ($line == -2)
 	$line = intval($argv[2]);
 
-execute("$print $cache $output $line \"$text\"");
+execute("$print $cache $output $display_width $display_height $line \"$text\"");
 execute("$fbcopy $output");

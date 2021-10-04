@@ -1,11 +1,12 @@
 This repository contains hardware drivers for various LED/LCD displays, used with Raspberry Pi or similar platforms, to signal Mobile Badger functional states.
 
+- [`adafruit-pitft-2x-lcd`](adafruit-pitft-2x-lcd) - [Adafruit PiTFT 2.2/2.8 inch LCD](https://learn.adafruit.com/adafruit-2-2-pitft-hat-320-240-primary-display-for-raspberry-pi)
 - [`bakebit-nanohat-oled`](bakebit-nanohat-oled) - [BakeBit NanoHat OLED](http://wiki.friendlyarm.com/wiki/index.php/NanoHat_OLED)
 - [`pimoroni-blinkt`](pimoroni-blinkt) - [Pimoroni Blinkt!](https://learn.pimoroni.com/tutorial/sandyj/getting-started-with-blinkt)
-- [`pimoroni-scroll-hat-mini`](pimoroni-scroll-hat-mini) - []()
-- [`waveshare-144inch-lcd-hat`](waveshare-144inch-lcd-hat) - []()
-- [`waveshare-rgb-led-hat`](waveshare-rgb-led-hat) - []()
-- [`framebuffer`](framebuffer) - generic driver for all HDMI-only displays, tested with [Adafruit PiTFT](https://learn.adafruit.com/adafruit-2-2-pitft-hat-320-240-primary-display-for-raspberry-pi), tuned for generic 320x240 screens
+- [`pimoroni-scroll-hat-mini`](pimoroni-scroll-hat-mini) - [Pimoroni Scroll HAT Mini](https://shop.pimoroni.com/products/scroll-hat-mini)
+- [`uctronics-35inch-lcd`](uctronics-35inch-lcd) - [Uctronics 3.5 inch Touchscreen](https://www.uctronics.com/display/uctronics-3-5-inch-touchscreen-for-raspberry-pi-with-case.html)
+- [`waveshare-144inch-lcd-hat`](waveshare-144inch-lcd-hat) - [Waveshare 1.44inch LCD display HAT](https://www.waveshare.com/1.44inch-lcd-hat.htm)
+- [`waveshare-rgb-led-hat`](waveshare-rgb-led-hat) - [Waveshare True color RGB LED HAT](https://www.waveshare.com/rgb-led-hat.htm)
 
 ### Installing
 

@@ -13,7 +13,7 @@ $levels = array (
 
 //  -1  - clear all display
 //  -2  - dynamic line, use one from command line
-// 0-16 - static line, use one from the table
+// 0-9  - static line, use one from the table
 $events = array (
 	"shutdown"                                 => array(-1, 0, "off"),
 
@@ -21,8 +21,8 @@ $events = array (
 	"target_ready"                             => array(0, 2, "half"),
 	"target_disconnected"                      => array(0, 2, "off"),
 
-	"media_device_detected"                    => array(16, 0, "half"),
-	"media_device_processed"                   => array(16, 0, "off"),
+	"media_device_detected"                    => array(9, 0, "half"),
+	"media_device_processed"                   => array(9, 0, "off"),
 
 	"operation_started"                        => array(-2, 0, "half"),
 	"operation_finished"                       => array(-2, 0, "off"),
