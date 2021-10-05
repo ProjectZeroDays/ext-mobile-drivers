@@ -1,14 +1,14 @@
 This repository contains hardware drivers for various LED/LCD displays, used with Raspberry Pi or similar platforms, to signal Mobile Badger functional states.
 
-| Device model(s) | Driver install manual | Notes |
-| --------------- | --------------------- | ----- |
-| [Adafruit PiTFT 2.2/2.8 inch LCD](https://learn.adafruit.com/adafruit-2-2-pitft-hat-320-240-primary-display-for-raspberry-pi) | [`adafruit-pitft-2x-lcd`](adafruit-pitft-2x-lcd) | framebuffer-based |
-| [BakeBit NanoHat OLED](http://wiki.friendlyarm.com/wiki/index.php/NanoHat_OLED) | [`bakebit-nanohat-oled`](bakebit-nanohat-oled) | for [NanoPi NEO/NEO2](http://wiki.friendlyarm.com/wiki/index.php/NanoPi_NEO2), not Raspberry Pi |
-| [Pimoroni Blinkt!](https://learn.pimoroni.com/tutorial/sandyj/getting-started-with-blinkt) | [`pimoroni-blinkt`](pimoroni-blinkt) |  |
-| [Pimoroni Scroll HAT Mini](https://shop.pimoroni.com/products/scroll-hat-mini) | [`pimoroni-scroll-hat-mini`](pimoroni-scroll-hat-mini) |  |
-| [Uctronics 3.5 inch Touchscreen](https://www.uctronics.com/display/uctronics-3-5-inch-touchscreen-for-raspberry-pi-with-case.html) | [`uctronics-35inch-lcd`](uctronics-35inch-lcd) | framebuffer-based; avoid it |
-| [Waveshare 1.44inch LCD display HAT](https://www.waveshare.com/1.44inch-lcd-hat.htm) | [`waveshare-144inch-lcd-hat`](waveshare-144inch-lcd-hat) |  |
-| [Waveshare True color RGB LED HAT](https://www.waveshare.com/rgb-led-hat.htm) | [`waveshare-rgb-led-hat`](waveshare-rgb-led-hat) |  |
+| Device model(s) | Installing | Notes |
+| --------------- | ---------- ----- |
+| [Adafruit PiTFT 2.2/2.8 inch LCD](https://learn.adafruit.com/adafruit-2-2-pitft-hat-320-240-primary-display-for-raspberry-pi) | [manual](adafruit-pitft-2x-lcd) | framebuffer-based |
+| [BakeBit NanoHat OLED](http://wiki.friendlyarm.com/wiki/index.php/NanoHat_OLED) | [manual](bakebit-nanohat-oled) | for [NanoPi NEO/NEO2](http://wiki.friendlyarm.com/wiki/index.php/NanoPi_NEO2), not Raspberry Pi |
+| [Pimoroni Blinkt!](https://learn.pimoroni.com/tutorial/sandyj/getting-started-with-blinkt) | [manual](pimoroni-blinkt) | our recommended device |
+| [Pimoroni Scroll HAT Mini](https://shop.pimoroni.com/products/scroll-hat-mini) | [manual](pimoroni-scroll-hat-mini) |  |
+| [Uctronics 3.5 inch Touchscreen](https://www.uctronics.com/display/uctronics-3-5-inch-touchscreen-for-raspberry-pi-with-case.html) | [manual](uctronics-35inch-lcd) | framebuffer-based; avoid it |
+| [Waveshare 1.44inch LCD display HAT](https://www.waveshare.com/1.44inch-lcd-hat.htm) | [manual](waveshare-144inch-lcd-hat) |  |
+| [Waveshare True color RGB LED HAT](https://www.waveshare.com/rgb-led-hat.htm) | [manual](waveshare-rgb-led-hat) |  |
 
 
 ### Installing
