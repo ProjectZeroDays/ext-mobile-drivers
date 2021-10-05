@@ -1,18 +1,34 @@
 This repository contains hardware drivers for various LED/LCD displays, used with Raspberry Pi or similar platforms, to signal Mobile Badger functional states.
 
-- [`adafruit-pitft-2x-lcd`](adafruit-pitft-2x-lcd) - [Adafruit PiTFT 2.2/2.8 inch LCD](https://learn.adafruit.com/adafruit-2-2-pitft-hat-320-240-primary-display-for-raspberry-pi)
-- [`bakebit-nanohat-oled`](bakebit-nanohat-oled) - [BakeBit NanoHat OLED](http://wiki.friendlyarm.com/wiki/index.php/NanoHat_OLED)
-- [`pimoroni-blinkt`](pimoroni-blinkt) - [Pimoroni Blinkt!](https://learn.pimoroni.com/tutorial/sandyj/getting-started-with-blinkt)
-- [`pimoroni-scroll-hat-mini`](pimoroni-scroll-hat-mini) - [Pimoroni Scroll HAT Mini](https://shop.pimoroni.com/products/scroll-hat-mini)
-- [`uctronics-35inch-lcd`](uctronics-35inch-lcd) - [Uctronics 3.5 inch Touchscreen](https://www.uctronics.com/display/uctronics-3-5-inch-touchscreen-for-raspberry-pi-with-case.html)
-- [`waveshare-144inch-lcd-hat`](waveshare-144inch-lcd-hat) - [Waveshare 1.44inch LCD display HAT](https://www.waveshare.com/1.44inch-lcd-hat.htm)
-- [`waveshare-rgb-led-hat`](waveshare-rgb-led-hat) - [Waveshare True color RGB LED HAT](https://www.waveshare.com/rgb-led-hat.htm)
+| Device model(s) | Driver install manual | Notes |
+| --------------- | --------------------- | ----- |
+| [Adafruit PiTFT 2.2/2.8 inch LCD](https://learn.adafruit.com/adafruit-2-2-pitft-hat-320-240-primary-display-for-raspberry-pi) | [`adafruit-pitft-2x-lcd`](adafruit-pitft-2x-lcd) | framebuffer-based |
+| [BakeBit NanoHat OLED](http://wiki.friendlyarm.com/wiki/index.php/NanoHat_OLED) | [`bakebit-nanohat-oled`](bakebit-nanohat-oled) | for [NanoPi NEO/NEO2](http://wiki.friendlyarm.com/wiki/index.php/NanoPi_NEO2), not Raspberry Pi |
+| [Pimoroni Blinkt!](https://learn.pimoroni.com/tutorial/sandyj/getting-started-with-blinkt) | [`pimoroni-blinkt`](pimoroni-blinkt) |  |
+| [Pimoroni Scroll HAT Mini](https://shop.pimoroni.com/products/scroll-hat-mini) | [`pimoroni-scroll-hat-mini`](pimoroni-scroll-hat-mini) |  |
+| [Uctronics 3.5 inch Touchscreen](https://www.uctronics.com/display/uctronics-3-5-inch-touchscreen-for-raspberry-pi-with-case.html) | [`uctronics-35inch-lcd`](uctronics-35inch-lcd) | framebuffer-based; avoid it |
+| [Waveshare 1.44inch LCD display HAT](https://www.waveshare.com/1.44inch-lcd-hat.htm) | [`waveshare-144inch-lcd-hat`](waveshare-144inch-lcd-hat) |  |
+| [Waveshare True color RGB LED HAT](https://www.waveshare.com/rgb-led-hat.htm) | [`waveshare-rgb-led-hat`](waveshare-rgb-led-hat) |  |
+
 
 ### Installing
 
 1. Clone this repository as `/opt/drivebadger/external/ext-mobile-drivers` directory on your Mobile Badger device.
-2. Inside this directory, create a symlink to subdirectory for your display device, eg. `ln -s pimoroni-blinkt installed`
-3. If required, install external drivers for your device.
+2. Follow the detailed install instructions for your device model (see above links).
+3. Enable the driver for your device by creating a symbolic link named `installed` to its directory:
+
+```
+cd /opt/drivebadger/external/ext-mobile-drivers
+ln -s pimoroni-blinkt installed
+```
+
+#### Why there is no single install script?
+
+There are two main reasons for it:
+
+1. Each device model has totally different dependencies and prerequisites, that can't be easily handled in a single script.
+2. Raspberry Pi don't have a Plug&Play mechanism, and it's not possible to automatically detect and recognize connected devices in a reliable way. So it's up to the user to install the proper drivers.
+
 
 ### More information
 

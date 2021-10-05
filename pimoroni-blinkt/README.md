@@ -34,7 +34,7 @@ Setting brightness to 0 still preserves colors, so lights can be eg. turned off/
 
 ## Installing
 
-First, you have to install Blinkt! software:
+First, you have to install Blinkt! software, by executing this as "pi" user on console:
 
 `curl https://get.pimoroni.com/blinkt | bash`
 

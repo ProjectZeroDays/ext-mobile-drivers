@@ -21,6 +21,9 @@ git clone https://github.com/adafruit/Raspberry-Pi-Installer-Scripts
 cd Raspberry-Pi-Installer-Scripts
 
 python3 adafruit-pitft.py --display=22 --rotation=90 --install-type=console
+
+systemctl stop getty@tty1.service
+systemctl disable getty@tty1.service
 ```
 
 See https://learn.adafruit.com/adafruit-2-8-pitft-capacitive-touch/easy-install-2 for more variants of the last command (`--display=22` parameter
