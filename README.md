@@ -1,7 +1,7 @@
 This repository contains hardware drivers for various LED/LCD displays, used with Raspberry Pi or similar platforms, to signal Mobile Badger functional states.
 
 | Device model(s) | Installing | Notes |
-| --------------- | ---------- ----- |
+| --------------- | ---------- | ----- |
 | [Adafruit PiTFT 2.2/2.8 inch LCD](https://learn.adafruit.com/adafruit-2-2-pitft-hat-320-240-primary-display-for-raspberry-pi) | [manual](adafruit-pitft-2x-lcd) | framebuffer-based |
 | [BakeBit NanoHat OLED](http://wiki.friendlyarm.com/wiki/index.php/NanoHat_OLED) | [manual](bakebit-nanohat-oled) | for [NanoPi NEO/NEO2](http://wiki.friendlyarm.com/wiki/index.php/NanoPi_NEO2), not Raspberry Pi |
 | [Pimoroni Blinkt!](https://learn.pimoroni.com/tutorial/sandyj/getting-started-with-blinkt) | [manual](pimoroni-blinkt) | our recommended device |
