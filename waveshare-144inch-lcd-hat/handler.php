@@ -2,8 +2,8 @@
 <?php
 
 $cache = "/run/144inch-lcd-hat.json";
-$clear = "/opt/drivebadger/external/ext-mobile-drivers/waveshare-144inch-lcd-hat/driver/clear.py";
-$print = "/opt/drivebadger/external/ext-mobile-drivers/waveshare-144inch-lcd-hat/driver/line.py";
+$clear = dirname(__FILE__)."/driver/clear.py";
+$print = dirname(__FILE__)."/driver/line.py";
 
 //  -1  - clear all display
 //  -2  - dynamic line, use one from command line

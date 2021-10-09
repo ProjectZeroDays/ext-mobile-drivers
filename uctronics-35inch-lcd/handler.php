@@ -6,8 +6,8 @@ $display_height = 320;
 
 $output = "/run/uctronics-35inch-lcd.png";
 $cache = "/run/uctronics-35inch-lcd.json";
-$print = "/opt/drivebadger/external/ext-mobile-drivers/utils/framebuffer/line.py";
-$fbcopy = "/opt/drivebadger/external/ext-mobile-drivers/utils/framebuffer/copy.sh";
+$print = dirname(dirname(__FILE__))."/utils/framebuffer/line.py";
+$fbcopy = dirname(dirname(__FILE__))."/utils/framebuffer/copy.sh";
 
 //  -1  - clear all display
 //  -2  - dynamic line, use one from command line

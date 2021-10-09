@@ -2,8 +2,8 @@
 <?php
 
 $cache = "/run/scroll-hat.json";
-$clear = "/opt/drivebadger/external/ext-mobile-drivers/pimoroni-scroll-hat-mini/driver/clear.py";
-$cmd = "/opt/drivebadger/external/ext-mobile-drivers/pimoroni-scroll-hat-mini/driver/set-pixel.py";
+$clear = dirname(__FILE__)."/driver/clear.py";
+$cmd = dirname(__FILE__)."/driver/set-pixel.py";
 
 $levels = array (
 	"off"  => 0,

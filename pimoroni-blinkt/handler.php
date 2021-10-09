@@ -7,7 +7,7 @@ $brightness = 1;
 
 
 $cache = "/run/blinkt.json";
-$cmd = "/opt/drivebadger/external/ext-mobile-drivers/pimoroni-blinkt/driver/set-pixel-rgb.py";
+$cmd = dirname(__FILE__)."/driver/set-pixel-rgb.py";
 
 $colors = array (
 	"off"    => array(  0,   0,   0),

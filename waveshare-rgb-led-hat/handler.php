@@ -2,7 +2,7 @@
 <?php
 
 $cache = "/run/rgb-led-hat.json";
-$cmd = "/opt/drivebadger/external/ext-mobile-drivers/waveshare-rgb-led-hat/driver/set-pixel-rgb.py";
+$cmd = dirname(__FILE__)."/driver/set-pixel-rgb.py";
 
 $colors = array (
 	"off"    => array(  0,   0,   0),
