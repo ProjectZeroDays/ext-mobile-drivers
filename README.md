@@ -4,6 +4,7 @@ This repository contains hardware drivers for various LED/LCD displays, used wit
 | --------------- | ---------- | ----- |
 | [Adafruit PiTFT 2.2/2.8 inch LCD](https://learn.adafruit.com/adafruit-2-2-pitft-hat-320-240-primary-display-for-raspberry-pi) | [manual](adafruit-pitft-2x-lcd) | framebuffer-based |
 | [BakeBit NanoHat OLED](http://wiki.friendlyarm.com/wiki/index.php/NanoHat_OLED) | [manual](bakebit-nanohat-oled) | for [NanoPi NEO/NEO2](http://wiki.friendlyarm.com/wiki/index.php/NanoPi_NEO2), not Raspberry Pi |
+| [BlinkStick Strip](https://www.blinkstick.com/products/blinkstick-strip) | [manual](blinkstick-strip) | USB instead of GPIO; our recommended device |
 | [Pimoroni Blinkt!](https://learn.pimoroni.com/tutorial/sandyj/getting-started-with-blinkt) | [manual](pimoroni-blinkt) | our recommended device |
 | [Pimoroni Scroll HAT Mini](https://shop.pimoroni.com/products/scroll-hat-mini) | [manual](pimoroni-scroll-hat-mini) |  |
 | [Uctronics 3.5 inch Touchscreen](https://www.uctronics.com/display/uctronics-3-5-inch-touchscreen-for-raspberry-pi-with-case.html) | [manual](uctronics-35inch-lcd) | framebuffer-based; avoid it |
